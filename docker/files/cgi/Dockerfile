@@ -2,7 +2,7 @@ FROM centos:7.2.1511
 
 RUN yum install -y epel-release &&\
 	rpm -ivh https://mirrors.tuna.tsinghua.edu.cn/remi/enterprise/remi-release-7.rpm
-RUN yum install -y lsof vim telnet
+RUN yum install -y lsof vim telnet net-tools
 RUN yum install -y --enablerepo=remi --enablerepo=remi-php72 \
     php \
 	php-opcache \
@@ -58,7 +58,6 @@ RUN wget https://github.com/arnaud-lb/php-rdkafka/archive/3.0.5.tar.gz &&\
 
 RUN yum -y install centos-release-scl &&\
 	yum -y install devtoolset-7 &&\
-	scl enable devtoolset-7 bash 
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
