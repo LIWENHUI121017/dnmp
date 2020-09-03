@@ -50,7 +50,7 @@ mkdir -p /etc/docker
 vim /etc/docker/daemon.json
 # 新增下面内容
 {
-    "registry-mirrors": ["https://8auvmfwy.mirror.aliyuncs.com"]
+    "registry-mirrors": ["https://9eyushd0.mirror.aliyuncs.com"]
 }
 # 重新加载配置、重启docker
 systemctl daemon-reload 
@@ -82,11 +82,6 @@ Creating proxy ...
 ```
 访问IP, 效果图如下    
 ![效果图](https://raw.githubusercontent.com/duiying/img/master/docker-lnmp.png)
-
-### 学习文档
-- [如何新建一个站点](docs/如何新建一个站点.md)
-- [如何安装yaf扩展](docs/如何安装yaf扩展.md)
-- [如何安装swoole扩展](docs/如何安装swoole扩展.md)
 
 ### 可能遇到的问题
 ```bash
